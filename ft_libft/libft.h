@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:06:57 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/09/21 17:52:07 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/09/23 16:45:48 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,8 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst);
 void	ft_lstclear(t_list **lst);
-void	ft_lstiter(t_list *lst, int (*f)(int));
-t_list	*ft_lstmap(t_list *lst, int (*f)(int, t_list*));
+int		ft_lstiter_ps(t_list *lst, int (*f)(t_list*));
+t_list	*ft_lstmap_ps(t_list *lst, int (*f)(int, t_list*));
 int		ft_printf(const char *str, ...);
 char	*ft_itoa_hex(unsigned long num, int t);
 int		ft_putchar(char c);
