@@ -1,0 +1,4 @@
+push_swap
+ft_libft/*.o
+ft_libft/*.a
+*.dSYM
