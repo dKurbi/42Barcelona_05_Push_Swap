@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*   push_swap_utils_reverse_rotate_bonus.c             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/01 17:18:14 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/09/23 16:27:32 by dkurcbar         ###   ########.fr       */
+/*   Created: 2023/09/27 13:23:28 by dkurcbar          #+#    #+#             */
+/*   Updated: 2023/10/04 15:05:53 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-t_list	*ft_lstmap_ps(t_list *lst, int(*f)(int, t_list*))
+void	rra_bonus(t_stack **stack_a)
 {
-	t_list	*newlist;
-	t_list	*nxt;
-	t_list	*original;
-	int		aux;
-	
+	reverse_rotate(stack_a);
+}
 
-	original = lst;
-	newlist = NULL;
-	nxt = newlist;
-	while (lst)
-	{
-		aux = f(lst->content, original);
-		nxt = ft_lstnew(aux);
-		if (!nxt)
-		{
-			ft_lstclear(&newlist);
-			return (NULL);
-		}
-		ft_lstadd_back(&newlist, nxt);
-		lst = lst->next;
-	}
-	return (newlist);
+void	rrb_bonus(t_stack **stack_b)
+{
+	reverse_rotate(stack_b);
+}
+
+void	rrr_bonus(t_stack **stack_a, t_stack **stack_b)
+{
+	reverse_rotate(stack_a);
+	reverse_rotate(stack_b);
 }

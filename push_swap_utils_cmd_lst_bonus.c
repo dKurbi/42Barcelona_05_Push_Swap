@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:33:45 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/03 17:08:57 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:50:17 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ t_cmdlst	*new_cmd(char *value)
 
 void	cmd_add(t_cmdlst **lst, t_cmdlst *new)
 {
-	t_cmdlst *last;
+	t_cmdlst	*last;
 
 	if (new)
 	{
@@ -40,7 +40,7 @@ void	cmd_add(t_cmdlst **lst, t_cmdlst *new)
 			*lst = new;
 			return ;
 		}
-		last =  cmdlst_last (*lst);
+		last = cmdlst_last (*lst);
 		last->next = new;
 	}
 }

@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   push_swap_utils_rotate_bonus.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 13:22:34 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/04 11:53:34 by dkurcbar         ###   ########.fr       */
+/*   Created: 2023/09/27 13:22:36 by dkurcbar          #+#    #+#             */
+/*   Updated: 2023/10/04 15:02:50 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "push_swap.h"
 
-size_t	ft_strlen(const char *str)
+void	ra_bonus(t_stack **stack_a)
 {
-	int	i;
+	rotate(stack_a);
+}
 
-	if (str == NULL)
-		return (0);
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+void	rb_bonus(t_stack **stack_b)
+{
+	rotate(stack_b);
+}
+
+void	rr_bonus(t_stack **stack_a, t_stack **stack_b)
+{
+	rotate(stack_a);
+	rotate(stack_b);
 }

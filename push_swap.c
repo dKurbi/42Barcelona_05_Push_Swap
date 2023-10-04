@@ -6,12 +6,11 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:20:27 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/03 15:43:50 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:49:28 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 int	main(int argc, char **argv)
 {

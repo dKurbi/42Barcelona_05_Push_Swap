@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 12:56:37 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/03 18:00:59 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/04 16:01:24 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,8 @@ void		rrb(t_stack **stack_b);
 void		rrr(t_stack **stack_a, t_stack **stack_b);
 void		sa(t_stack **stack_a);
 void		sb(t_stack **stack_b);
+void		ss(t_stack **stack_a, t_stack **stack_b);
+void		swap_stack(t_stack **stack);
 void		sort_3_elements(t_stack **stack);
 void		sort_less_6(t_stack **stack_a, t_stack **stack_b);
 void		sort_more_5(t_stack **stack_a, t_stack **stack_b);
@@ -116,7 +118,23 @@ void		cmd_add(t_cmdlst **lst, t_cmdlst *new);
 t_cmdlst	*cmdlst_last(t_cmdlst *lst);
 void		cmdlst_clear(t_cmdlst **lst);
 void		error_cmd(t_cmdlst **lst, t_stack **stack, char **str);
-char		**init_instruccion(void);
-void	 	check_cmd(t_cmdlst **lst, t_stack **stack);
+char		**init_instruccion(t_cmdlst **lst, t_stack **stack);
+void		check_cmd_lst(t_cmdlst **lst, t_stack **stack);
+void		get_str_cmd(t_cmdlst **cmd_lst, t_stack **stack_a);
+void		to_do_cmd_lst(t_cmdlst *clst, t_stack **stack_a, t_stack **stack_b);
+void		ko_cmd(t_cmdlst **lst, t_stack **stack_a, t_stack **stack_b);
+void		print_stack(char *str, t_stack *stack);
+void		pa_bonus(t_stack **stack_a, t_stack **stack_b);
+void		pb_bonus(t_stack **stack_a, t_stack **stack_b);
+void		ra_bonus(t_stack **stack_a);
+void		rb_bonus(t_stack **stack_b);
+void		rr_bonus(t_stack **stack_a, t_stack **stack_b);
+void		ss_bonus(t_stack **stack_a, t_stack **stack_b);
+void		sb_bonus(t_stack **stack_b);
+void		sa_bonus(t_stack **stack_a);
+void		rra_bonus(t_stack **stack_a);
+void		rrb_bonus(t_stack **stack_b);
+void		rrr_bonus(t_stack **stack_a, t_stack **stack_b);
+void		ok_exit(t_cmdlst **lst, t_stack **stack_a, t_stack **stack_b);
 
 #endif
