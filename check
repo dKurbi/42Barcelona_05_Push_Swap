@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Verificar si se proporcionaron argumentos
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 <lista_de_numeros>"
+  exit 1
+fi
+
+# Argumentos pasados al script
+args="$@"
+
+# Ejecutar push_swap con los argumentos
+./push_swap $args | ./checker_Mac $args
+

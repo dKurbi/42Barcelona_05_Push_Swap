@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:06:57 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/09/23 16:45:48 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/03 13:50:31 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,10 @@
 
 typedef struct s_list
 {
-	int				content;
+	void			*value;
 	struct s_list	*next;
 }	t_list;
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -61,15 +62,15 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-t_list	*ft_lstnew(int content);
+t_list	*ft_lstnew(void *value);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst);
-void	ft_lstclear(t_list **lst);
-int		ft_lstiter_ps(t_list *lst, int (*f)(t_list*));
-t_list	*ft_lstmap_ps(t_list *lst, int (*f)(int, t_list*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_printf(const char *str, ...);
 char	*ft_itoa_hex(unsigned long num, int t);
 int		ft_putchar(char c);
@@ -86,5 +87,6 @@ char	*join_str_len(char *o_str, char *s_str, int lo);
 int		check_n(char *str);
 void	my_free(char **str1, char **str2, char **str3);
 int		init_read(char **read_str, long *nb, long *n_pos);
+int		ft_abs(int n);
 
 #endif

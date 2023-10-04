@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 17:46:53 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/07/27 16:33:36 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/03 13:49:59 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	init(char **rtn, char **read_str, int *i_rtn, int fd)
 {
-	if (fd < 0) 
+	if (fd < 0)
 		return (-1);
 	*rtn = NULL;
 	*read_str = NULL;
@@ -29,7 +29,7 @@ static int	manage_storage(char **rtn, char **stor)
 	int		n_pos;
 	char	*swap;
 
-	if (stor && *stor) 
+	if (stor && *stor)
 	{
 		n_pos = check_n(*stor);
 		*rtn = join_str_len(NULL, *stor, n_pos);
@@ -62,7 +62,7 @@ static int	read_line(int fd, char **read_str, char **rtn)
 		nb = read(fd, *read_str, BUFFER_SIZE);
 		if (nb == -1)
 			return (-1);
-		if (nb == 0) 
+		if (nb == 0)
 			return (1);
 		(*read_str)[nb] = '\0';
 		n_pos = check_n(*read_str);

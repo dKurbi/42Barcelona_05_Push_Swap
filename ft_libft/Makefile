@@ -6,7 +6,7 @@
 #    By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 16:34:27 by dkurcbar          #+#    #+#              #
-#    Updated: 2023/09/23 16:33:24 by dkurcbar         ###   ########.fr        #
+#    Updated: 2023/09/29 18:17:01 by dkurcbar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,16 +20,16 @@ SRCS	:=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 			ft_printf.c ft_itoa_hex.c ft_putchar.c ft_putstr.c ft_itoa_u.c \
-			get_next_line.c get_next_line_utils.c
+			get_next_line.c get_next_line_utils.c ft_abs.c
 			
 SRCS_B	:=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 			ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c ft_lstiter_ps_bonus.c ft_lstmap_ps_bonus.c	
+			ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c	
 
 OBJS	:=	${SRCS:.c=.o}
 OBJS_B	:=  ${SRCS_B:.c=.o}
 CC		:=	gcc
-CFLAGS	:=	-Wall -Werror -Wextra 
+CFLAGS	:=	-Wall -Werror -Wextra -g
 AR		:=	ar rcs
 INCLUDE	:=	libft.h Makefile
 RM		:=	rm -f

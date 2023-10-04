@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 14:46:39 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/07/26 16:18:03 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/03 13:50:10 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	check_n(char *str)
 	i = 0;
 	if (!str)
 		return (-1);
-	while (str[i] != '\0' && str[i] != '\n') 
+	while (str[i] != '\0' && str[i] != '\n')
 		i++;
 	if (str[i] == '\0')
 		return (-1);

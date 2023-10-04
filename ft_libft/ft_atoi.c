@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 13:29:04 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/09/21 16:05:15 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/03 13:49:00 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_atoi(const char *str)
 	i = initnum(str, &sign, &n);
 	while (str[i] && ft_isdigit(str[i]))
 	{
-		if (n > 214748364 || ((n == 214748364) && ((str[i] - '0') > 7)))		
+		if (n > 214748364 || ((n == 214748364) && ((str[i] - '0') > 7)))
 		{
 			if (sign > 0)
 				return (2147483647);
