@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:11:40 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/04 16:04:02 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/04 16:36:23 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ char	**init_instruccion(t_cmdlst **lst, t_stack **stack)
 	movs = ft_split(str, ' ');
 	if (!movs)
 		error_cmd(lst, stack, NULL);
-	free(str);
 	return (movs);
 }
 
