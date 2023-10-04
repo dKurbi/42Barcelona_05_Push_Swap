@@ -2,3 +2,16 @@ push_swap
 ft_libft/*.o
 ft_libft/*.a
 *.dSYM
+*.o
+.vscode
+.DS_Store
+.pro_chequer.swp
+0
+a.out
+check
+check_random
+pro_checker
+pro_chequer
+prueba_split.c
+push_swap_test
+traces.txt
