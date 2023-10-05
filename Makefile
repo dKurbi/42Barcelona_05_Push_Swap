@@ -6,7 +6,7 @@
 #    By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/30 17:48:56 by dkurcbar          #+#    #+#              #
-#    Updated: 2023/10/04 16:24:39 by dkurcbar         ###   ########.fr        #
+#    Updated: 2023/10/05 14:33:59 by dkurcbar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,8 +34,7 @@ SRCS_B	= checker.c push_swap_utils_cmd_lst_bonus.c \
 		push_swap_utils_to_do_bonus.c push_swap_utils_rotate_bonus.c \
 		push_swap_utils_reverse_rotate_bonus.c push_swap_utils_push_bonus.c \
 		push_swap_utils_swap_bonus.c
-		
-		
+			
 OBJS_M	:=	${SRCS_M:.c=.o}
 OBJS	:=	${SRCS:.c=.o}
 OBJS_B	:= 	${SRCS_B:.c=.o}
@@ -67,7 +66,7 @@ $(BONUS):	$(OBJS) $(OBJS_M) $(OBJS_B) $(LIBFT) $(INCLUDE) $(NAME)
 $(NAME): $(OBJS) $(OBJS_M) $(LIBFT) $(INCLUDE)
 	@ $(CC) $(CFLAG) $(OBJS) $(OBJS_M) $(INC_LIB) -o $(NAME)
 	@printf "$(_SUCCESS) Push_swap ready.\n"
-	
+
 %.o: %.c ${INCLUDE}
 	@${CC} -c $(CFLAG) $< -o $@ && echo "Compiled: $< -> $@"
 

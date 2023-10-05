@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:11:40 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/04 16:36:23 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/05 15:32:04 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	error_cmd(t_cmdlst **lst, t_stack **stack, char **str)
 {
-	free_split(str);
+	free_split(str, NULL);
 	cmdlst_clear(lst);
 	ft_lstclear_ps(stack);
 	write(2, "Error\n", 6);
@@ -47,8 +47,6 @@ char	**init_instruccion(t_cmdlst **lst, t_stack **stack)
 
 	i = -1;
 	str = "sa\n sb\n ss\n pa\n pb\n ra\n rb\n rr\n rra\n rrb\n rrr\n \n";
-	if (str == NULL)
-		return (NULL);
 	movs = ft_split(str, ' ');
 	if (!movs)
 		error_cmd(lst, stack, NULL);
@@ -81,5 +79,5 @@ void	check_cmd_lst(t_cmdlst **lst, t_stack **stack)
 		flag = 0;
 		cmdlst = cmdlst->next;
 	}
-	free_split(movs);
+	free_split(movs, NULL);
 }

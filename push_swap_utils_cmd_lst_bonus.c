@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:33:45 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/04 15:50:17 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/04 16:59:26 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_cmdlst	*new_cmd(char *value)
 {
 	t_cmdlst	*new;
 
-	new = ft_calloc(1, sizeof(t_list));
+	new = ft_calloc(1, sizeof(t_cmdlst));
 	if (new != NULL)
 	{
 		new->cmd = ft_strdup(value);

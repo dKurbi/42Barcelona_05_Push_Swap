@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:55:17 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/03 12:37:52 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/05 15:27:31 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,12 +78,12 @@ int	check_max_int(int num, char *str)
 	return (0);
 }
 
-void	free_split(char **split)
+void	free_split(char **split, char **argv)
 {
 	int	i;
 
 	i = 0;
-	if (split != NULL)
+	if ((split != NULL) && split != argv)
 	{
 		while (split[i])
 		{

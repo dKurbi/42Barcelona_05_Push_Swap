@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 12:56:37 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/04 16:01:24 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/05 15:28:43 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,10 @@ t_mov		get_cheaper(t_stack *stack);
 int			get_index(int num, t_stack *lst);
 int			get_max(t_stack *stack);
 int			get_min(t_stack *stack);
-void		create_stack(t_stack **stack_a, char **list_num_s);
+void		create_stack(t_stack **stack_a, char **list_num_s, char **argcv);
 void		do_movements(t_stack **stack_a, t_stack **stack_b, t_mov mov);
 void		error(t_stack **stack);
-void		free_split(char **split);
+void		free_split(char **split, char **argv);
 void		ft_lstdelone_ps(t_stack *lst);
 void		ft_lstadd_back_ps(t_stack **lst, t_stack *new);
 void		ft_lstadd_front_ps(t_stack **lst, t_stack *new);

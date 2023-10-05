@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 17:46:53 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/03 13:49:59 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/05 11:49:28 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,16 @@ static int	manage_storage(char **rtn, char **stor)
 {
 	int		n_pos;
 	char	*swap;
+	int		len;
 
 	if (stor && *stor)
 	{
 		n_pos = check_n(*stor);
 		*rtn = join_str_len(NULL, *stor, n_pos);
+		len = len_str(*stor);
 		if (*rtn == NULL)
 			return (-1);
-		if (n_pos > -1 && n_pos < len_str(*stor))
+		if (n_pos > -1 && n_pos < len)
 		{
 			swap = join_str_len(NULL, &(*stor)[n_pos], -1);
 			if (swap == NULL)
@@ -45,6 +47,8 @@ static int	manage_storage(char **rtn, char **stor)
 			return (1);
 		}
 		my_free(stor, NULL, NULL);
+		if (n_pos == len)
+			return (1);
 	}
 	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 13:43:55 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/03 13:28:24 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/05 15:27:47 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	create_stack(t_stack **stack_a, char **list_num_s)
+void	create_stack(t_stack **stack_a, char **list_num_s, char **argv)
 {
 	int		i;
 	t_stack	*new_node;
@@ -36,6 +36,7 @@ void	create_stack(t_stack **stack_a, char **list_num_s)
 	lst_indexed = ft_lstmap_ps(*stack_a, get_index);
 	ft_lstclear_ps(stack_a);
 	*stack_a = lst_indexed;
+	free_split (list_num_s, argv);
 }
 
 void	ft_lstadd_front_ps(t_stack **lst, t_stack *new)

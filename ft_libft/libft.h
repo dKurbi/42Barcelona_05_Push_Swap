@@ -6,16 +6,13 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:06:57 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/03 13:50:31 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/05 13:54:22 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
 # include <stdio.h>
 # include <stdarg.h>
 # include <unistd.h>

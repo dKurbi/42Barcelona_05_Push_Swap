@@ -6,14 +6,14 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 19:59:14 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/07/27 16:33:37 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/05 13:57:55 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 1
 # endif
 # include <stdio.h>
 # include <stdlib.h>

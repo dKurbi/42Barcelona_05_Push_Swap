@@ -6,7 +6,7 @@
 /*   By: dkurcbar <dkurcbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:20:27 by dkurcbar          #+#    #+#             */
-/*   Updated: 2023/10/04 15:49:28 by dkurcbar         ###   ########.fr       */
+/*   Updated: 2023/10/05 15:27:26 by dkurcbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ int	main(int argc, char **argv)
 		if (argv[1][0] == '\0')
 			error(NULL);
 		else
-			create_stack(&stack_a, ft_split(argv[1], ' '));
+			create_stack(&stack_a, ft_split(argv[1], ' '), &argv[1]);
 	}
 	else if (argc > 2)
-		create_stack(&stack_a, &argv[1]);
+		create_stack(&stack_a, &argv[1], &argv[1]);
 	if (ft_lstsize_ps(stack_a) < 6)
 		sort_small_stack(&stack_a, &stack_b);
 	else if (ft_lstsize_ps(stack_a) > 5)
